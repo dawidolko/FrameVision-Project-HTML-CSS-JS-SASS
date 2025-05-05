@@ -1,0 +1,142 @@
+@media (min-width: 992px) {
+  .nav {
+    &__link {
+      &:hover::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .about {
+    &__img {
+      width: 420px;
+    }
+
+    &__heading {
+      &--line {
+        width: 18%;
+      }
+    }
+
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__text {
+      font-size: 1.7rem;
+    }
+
+    &__bgc {
+      margin: 4em 0;
+    }
+  }
+
+  .services {
+    &__img {
+      width: 420px;
+    }
+
+    &__title {
+      &--line {
+        width: 22%;
+      }
+    }
+
+    &__container {
+      margin-top: 5.5em;
+      gap: 2.8em;
+    }
+    &__icons {
+      gap: 1.2em;
+      margin-bottom: 6.5em;
+    }
+    &__icon {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  .team {
+    &__title {
+      &--line {
+        width: 18%;
+      }
+    }
+
+    &__card {
+      height: 470px;
+    }
+  }
+
+  .open {
+    &__title {
+      &--line {
+        width: 28%;
+      }
+    }
+
+    &__hours {
+      max-width: 75%;
+    }
+
+    &__body {
+      @include flexCenter(column);
+    }
+
+    .testimonials {
+      &__title {
+        &--line {
+          width: 22%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.7rem;
+  }
+
+  .container {
+    max-width: 1350px;
+  }
+
+  .nav {
+    &__logo {
+      font-size: 4.5rem;
+    }
+
+    .header {
+      &__title {
+        max-width: 900px;
+        font-size: 8rem;
+      }
+    }
+  }
+
+  .about {
+    &__img {
+      width: 450px;
+    }
+  }
+
+  .services {
+    &__img {
+      width: 450px;
+    }
+  }
+
+  .testimonials {
+    &__img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .contact {
+    &__text {
+      max-width: unset;
+    }
+  }
+}

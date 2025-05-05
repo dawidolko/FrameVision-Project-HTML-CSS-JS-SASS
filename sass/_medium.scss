@@ -1,0 +1,317 @@
+@use "colors" as *;
+@use "mixins" as *;
+@use "sizes" as *;
+
+@media screen and (min-width: 768px) {
+  html {
+    scroll-padding-top: unset;
+  }
+
+  .container {
+    max-width: 1180px;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .nav {
+    position: relative;
+    background: transparent;
+    padding: 1.2em;
+
+    &__logo {
+      font-size: 3.6rem;
+    }
+
+    &__links {
+      flex-direction: row;
+      gap: 0.8em;
+      position: relative;
+      padding-right: 0.6em;
+      height: unset;
+      width: unset;
+      background: unset;
+      transition: 0.5s;
+      transform: translateX(0);
+    }
+
+    &__link {
+      padding: 0 0.6em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        height: 1.5px;
+        width: 100%;
+        background-color: $main;
+        transform: scaleX(0);
+        transition: transform 0.35s ease-in;
+      }
+
+      &:hover::before {
+        transform: scaleX(0.85);
+      }
+    }
+  }
+
+  .header {
+    background: url("../img/header_bg_large.jpg") rgba(0, 0, 0, 0.5);
+    &__title {
+      max-width: 720px;
+      font-size: 6.4rem;
+    }
+    &__btn {
+      padding: 1em 2.5em;
+      font-size: 1.6rem;
+      transition: background-color 0.45s ease;
+      border: 2px solid transparent;
+
+      &:hover {
+        background: transparent;
+        border: 2px solid $main;
+        color: $main;
+      }
+    }
+  }
+
+  .about {
+    display: flex;
+    overflow: hidden;
+
+    &__heading {
+      font-size: $medium;
+
+      &--line {
+        width: 28%;
+      }
+    }
+
+    &__bgc {
+      margin: 3.2em 0;
+      @include flexCenter(row);
+    }
+
+    &__img {
+      display: block;
+      width: 420px;
+      transform: translateX(-600px);
+      opacity: 0;
+      transition: opacity 1.8s, transform 1.6s;
+    }
+
+    &__text {
+      max-width: 520px;
+      font-size: 1.6rem;
+      transform: translateX(700px);
+      opacity: 0;
+      transition: opacity 1.8s, transform 1.6s;
+    }
+
+    &__title {
+      font-size: $medium;
+    }
+  }
+
+  .services {
+    overflow: hidden;
+
+    &__title {
+      font-size: $medium;
+
+      &--line {
+        width: 36%;
+      }
+    }
+
+    &__container {
+      @include flexCenter(row);
+      gap: 2em;
+      margin-top: 3.5em;
+    }
+
+    &__icons {
+      &--left {
+        transform: translateX(-400px);
+        opacity: 0;
+        transition: opacity 1.8s, transform 1.6s;
+      }
+
+      &--right {
+        transform: translateX(400px);
+        opacity: 0;
+        transition: opacity 1.8s, transform 1.6s;
+      }
+    }
+
+    &__icons {
+      margin-bottom: 5.5em;
+      @include flexCenter(column);
+
+      &:hover .services__icon {
+        background-color: $main;
+        transform: rotate(360deg);
+      }
+    }
+
+    &__img {
+      display: block;
+      width: 420px;
+      object-fit: cover;
+      padding-bottom: 5.5em;
+    }
+  }
+
+  .transform {
+    height: 42vh;
+
+    &__title {
+      font-size: $medium;
+    }
+
+    &__btn {
+      font-size: 1.6rem;
+      border: 2px solid transparent;
+      transition: background-color 0.45s ease;
+
+      &:hover {
+        background: transparent;
+        border: 2px solid $main;
+        color: $main;
+      }
+    }
+  }
+
+  .team {
+    overflow: hidden;
+    margin-bottom: 3em;
+
+    &__title {
+      font-size: $medium;
+
+      &--line {
+        width: 36%;
+      }
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__card {
+      height: 420px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+
+      &--first {
+        transform: translateX(-600px);
+        opacity: 0;
+        transition: opacity 1.8s, transform 1.6s;
+      }
+
+      &--third {
+        transform: translateX(700px);
+        opacity: 0;
+        transition: opacity 1.8s, transform 1.6s;
+      }
+    }
+
+    &__card:hover &__text {
+      height: 100%;
+    }
+    &__card:hover &__icons {
+      opacity: 1;
+    }
+    &__card:hover &__img {
+      transform: scale(1.15);
+    }
+
+    &__icons {
+      opacity: 0;
+      i {
+        transition: color 0.35s ease;
+      }
+      i:hover {
+        cursor: pointer;
+        color: $main;
+      }
+    }
+  }
+
+  .open {
+    margin-bottom: 3em;
+    &__title {
+      font-size: $medium;
+
+      &--line {
+        width: 46%;
+      }
+    }
+  }
+
+  .contact {
+    &__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+
+      & > * {
+        flex: 1;
+      }
+    }
+
+    &__logo {
+      font-size: 5.2rem;
+    }
+    &__text {
+      max-width: 320px;
+    }
+
+    &__links {
+      gap: 1em;
+    }
+
+    &__link {
+      transition: color 0.35s ease;
+      &:hover {
+        color: $main;
+      }
+    }
+  }
+
+  .reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1.6s ease;
+  }
+  .reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .about__item {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  .testimonials {
+    &__title {
+      font-size: $medium;
+
+      &--line {
+        width: 28%;
+      }
+    }
+  }
+
+  .modal {
+    width: 620px;
+  }
+
+  .footer {
+    padding: 1.6em;
+  }
+}
