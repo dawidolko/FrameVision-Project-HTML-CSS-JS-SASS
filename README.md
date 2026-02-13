@@ -103,7 +103,7 @@ The project is deployed and available at: **[https://framevision.dawidolko.pl](h
 
 ## 🖼️ Preview
 
-[<img src="img/framevision.dawidolko.pl_.png" width="80%" alt="FrameVision Studio Preview"/>](img/framevision.dawidolko.pl_.png)
+[<img src="img/framevision.dawidolko.pl_.webp" width="80%" alt="FrameVision Studio Preview"/>](img/framevision.dawidolko.pl_.webp)
 
 ## 🤝 Contributing
 

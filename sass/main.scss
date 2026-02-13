@@ -80,7 +80,7 @@ ul {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background: url("../img/nav-bgc.jpg") rgba(12, 12, 12, 0.9);
+    background: url("../img/nav-bgc.webp") rgba(12, 12, 12, 0.9);
     @include bgcPosition;
     transform: translateX(100%);
     z-index: 1;
@@ -117,7 +117,7 @@ ul {
 
 .header {
   height: 100vh;
-  background: url("../img/header_bg_small.jpg") rgba(0, 0, 0, 0.5);
+  background: url("../img/header_bg_small.webp") rgba(0, 0, 0, 0.5);
   @include bgcPosition;
   margin-bottom: 2.8em;
 
@@ -234,7 +234,7 @@ ul {
 
 .transform {
   height: 52vh;
-  background: url(../img/transform.jpg) rgba(0, 0, 0, 0.8);
+  background: url(../img/transform.webp) rgba(0, 0, 0, 0.8);
   @include bgcPosition;
   background-attachment: fixed;
   margin-bottom: 2.8em;
@@ -322,7 +322,7 @@ ul {
 .testimonials {
   @include flexCenter(column);
   height: 52vh;
-  background: url("../img/header_bg_small.jpg") rgba(0, 0, 0, 0.8);
+  background: url("../img/header_bg_small.webp") rgba(0, 0, 0, 0.8);
   @include bgcPosition;
   overflow: hidden;
   margin-top: 2.8em;

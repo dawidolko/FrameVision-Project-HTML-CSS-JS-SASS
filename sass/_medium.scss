@@ -58,7 +58,7 @@
   }
 
   .header {
-    background: url("../img/header_bg_large.jpg") rgba(0, 0, 0, 0.5);
+    background: url("../img/header_bg_large.webp") rgba(0, 0, 0, 0.5);
     &__title {
       max-width: 720px;
       font-size: 6.4rem;
@@ -99,7 +99,9 @@
       width: 420px;
       transform: translateX(-600px);
       opacity: 0;
-      transition: opacity 1.8s, transform 1.6s;
+      transition:
+        opacity 1.8s,
+        transform 1.6s;
     }
 
     &__text {
@@ -107,7 +109,9 @@
       font-size: 1.6rem;
       transform: translateX(700px);
       opacity: 0;
-      transition: opacity 1.8s, transform 1.6s;
+      transition:
+        opacity 1.8s,
+        transform 1.6s;
     }
 
     &__title {
@@ -136,13 +140,17 @@
       &--left {
         transform: translateX(-400px);
         opacity: 0;
-        transition: opacity 1.8s, transform 1.6s;
+        transition:
+          opacity 1.8s,
+          transform 1.6s;
       }
 
       &--right {
         transform: translateX(400px);
         opacity: 0;
-        transition: opacity 1.8s, transform 1.6s;
+        transition:
+          opacity 1.8s,
+          transform 1.6s;
       }
     }
 
@@ -208,13 +216,17 @@
       &--first {
         transform: translateX(-600px);
         opacity: 0;
-        transition: opacity 1.8s, transform 1.6s;
+        transition:
+          opacity 1.8s,
+          transform 1.6s;
       }
 
       &--third {
         transform: translateX(700px);
         opacity: 0;
-        transition: opacity 1.8s, transform 1.6s;
+        transition:
+          opacity 1.8s,
+          transform 1.6s;
       }
     }
 
