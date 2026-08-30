@@ -14,8 +14,36 @@
       src="https://kit.fontawesome.com/fdc09ecfc9.js"
       crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css" />
+  
+    <!-- Canonical URL: the authoritative address for this page. -->
+    <link rel="canonical" href="https://framevision.dawidolko.pl/" />
+
+    <!-- Open Graph / Twitter: controls how the page renders when shared. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://framevision.dawidolko.pl/" />
+    <meta property="og:title" content="FrameVision Studio — professional photography" />
+    <meta property="og:description" content="Photography studio offering portrait, business, family and fine art sessions. Built with HTML, SASS and JavaScript." />
+    <meta property="og:site_name" content="FrameVision Studio" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FrameVision Studio — professional photography" />
+    <meta name="twitter:description" content="Portrait, business, family and fine art photography sessions." />
+
+    <!-- Structured data: lets search engines describe the studio in results. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "FrameVision Studio",
+        "url": "https://framevision.dawidolko.pl",
+        "description": "Photography studio offering portrait, business, family and fine art sessions.",
+        "author": { "@type": "Person", "name": "Dawid Olko", "url": "https://dawidolko.pl" }
+      }
+    </script>
   </head>
   <body>
+    <!-- First focusable element: lets a keyboard user skip the navigation. -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">FrameVision</a>
@@ -37,7 +65,7 @@
       </div>
     </header>
 
-    <main class="main">
+    <main id="main-content" tabindex="-1" class="main">
       <h2 class="about__heading" id="about">About Us</h2>
       <hr class="about__heading--line" />
       <section class="about container">
