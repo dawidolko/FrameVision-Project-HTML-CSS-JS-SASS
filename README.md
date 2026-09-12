@@ -1,127 +1,105 @@
-# FrameVision-Project-HTML-CSS-JS-SASS
+# FrameVision
 
-> 🚀 **Modern Photography Studio Website** - Build responsive frontend websites for professional photography services
+> 📸 **One page, five sections, no framework** — a photography studio site where the scroll animations and the booking modal are hand-written
 
-## 📋 Description
+**FrameVision** is a single-page site for a photography studio: opening header, about, services, team and contact. Sections reveal as they enter the viewport, the navigation gains a background once you scroll past the header, a scroll-to-top button appears after 450 pixels, and a booking modal collects a name and a phone number with its own validation.
 
-Welcome to the **FrameVision-Project** repository! This project showcases a modern and fully responsive frontend website for professional photography services. The focus is on delivering high performance, aesthetic design, and smooth user experience across all devices using cutting-edge frontend technologies.
+All of it is vanilla JavaScript and SCSS — no framework, no animation library, no build step beyond compiling the stylesheet.
 
-This repository demonstrates best practices in photography portfolio presentation, featuring responsive gallery layouts, interactive JavaScript functionality, and organized SCSS architecture for stunning visual storytelling and professional service showcase.
+![HTML5](https://img.shields.io/badge/HTML5-semantic-E34F26?logo=html5&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-SCSS-CC6699?logo=sass&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-F7DF1E?logo=javascript&logoColor=black)
+![WebP](https://img.shields.io/badge/Images-WebP%20%2B%20fallback-0A84FF)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-## 📁 Repository Structure
+**Live:** [framevision.dawidolko.pl](https://framevision.dawidolko.pl)
 
-```
-FrameVision-Project-HTML-CSS-JS-SASS/
-├── 📄 index.html     # Main entry page and application structure
-├── 🎨 css/           # Compiled CSS files for production
-├── ⚙️ scss/          # SCSS/SASS source files for styling
-├── 💻 js/            # JavaScript scripts and interactive functionality
-├── 🖼️ img/           # Portfolio images and website graphics
-└── 📖 README.md      # Project documentation
-```
+---
+
+## 🎯 Key Features
+
+- **Reveal animations written by hand** — elements marked `.reveal`, `.move` and `.moves` are checked against the viewport on scroll, each with its own trigger distance. No IntersectionObserver polyfill, no library.
+- **A navigation that reacts to position** — the bar picks up a background after 50 pixels of scroll, so the opening photograph is not covered by a solid strip.
+- **A burger menu that closes itself** — tapping any link inside the open menu closes it, which is the behaviour people expect and the one most hand-rolled menus forget.
+- **A booking modal with validation** — name and phone are checked before submission and the fields are cleared on each open, so a second booking never starts with the previous person's details.
+- **A scroll-to-top button that stays out of the way** — it only appears once there is something to scroll back from.
+- **WebP with a JPG fallback** — every photograph ships in both formats.
+- **SCSS split by breakpoint** — colours, sizes and mixins as partials, with `_small`, `_medium` and `_large` holding the responsive rules rather than scattering media queries.
+- **Skip link and landmarks** — `#main-content` and named sections make keyboard navigation work.
+
+---
+
+## 🧩 The Page
+
+| Section      | What it does                                              |
+| ------------ | --------------------------------------------------------- |
+| **Header**   | Full-bleed photograph with the booking call to action.     |
+| **About**    | The studio, revealed on scroll.                            |
+| **Services** | What is offered, as cards.                                 |
+| **Team**     | The photographers.                                         |
+| **Contact**  | Details and the booking modal.                             |
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology       | Role                                                       |
+| ---------------- | ---------------------------------------------------------- |
+| **HTML5**        | Semantic single-page markup with landmarks.                |
+| **SCSS**         | Variables, mixins and one partial per breakpoint.          |
+| **JavaScript**   | Scroll effects, burger menu, modal and validation.         |
+| **Font Awesome** | Icon set.                                                  |
+
+---
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
+### Prerequisites
+
+- Any static web server (or just a browser)
+- Sass, if you intend to change the styles
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/dawidolko/FrameVision-Project-HTML-CSS-JS-SASS.git
 cd FrameVision-Project-HTML-CSS-JS-SASS
 ```
 
-### 2. Basic Setup (Static Version)
+### 2. Open it
 
-- Open the `index.html` file directly in your browser
-- Use Live Server extension in your code editor for better development experience
-- No build process required - ready to use immediately!
+```bash
+open index.html          # or serve the directory
+python3 -m http.server   # http://localhost:8000
+```
 
-### 3. Development Setup
+### 3. Work on the styles
 
-For enhanced development workflow:
+```bash
+sass --watch sass/main.scss css/style.css
+```
 
-- Use any modern code editor with SCSS support
-- Enable live preview for real-time changes
+---
 
-## ⚙️ System Requirements
+## 📁 Project Structure
 
-### **Essential Tools:**
+```
+FrameVision-Project-HTML-CSS-JS-SASS/
+├── index.html        # the whole page: header, about, services, team, contact
+├── js/
+│   └── main.js       # nav background, burger, scroll-to-top, reveals, booking modal
+├── sass/
+│   ├── main.scss     # entry point
+│   ├── _colors.scss  _sizes.scss  _mixins.scss
+│   └── _small.scss  _medium.scss  _large.scss
+├── css/              # compiled stylesheet
+├── img/              # photographs, WebP + JPG
+├── icons/            # section icons
+└── robots.txt
+```
 
-- **Modern Web Browser** (Chrome, Firefox, Safari, Edge)
-- **Code Editor** (VS Code, Sublime Text, WebStorm)
-- **Git** for version control
-
-### **Development Environment:**
-
-- **Live Server** extension for real-time preview
-- **Sass/SCSS compiler** for style preprocessing
-- **Browser Developer Tools** for debugging
-
-### **Recommended Extensions:**
-
-- **Sass/SCSS** syntax highlighting
-- **Live Sass Compiler** for automatic compilation
-- **Prettier** for code formatting
-- **Image optimization tools** for portfolio assets
-
-## ✨ Key Features
-
-### **📸 Photography Portfolio**
-
-- Professional gallery showcasing portrait, business, family, and artistic photography
-- Detailed portfolio items with session descriptions and high-quality imagery
-
-### **📱 Responsive Design**
-
-- Fully optimized for mobile phones, tablets, and desktop devices
-- Modern CSS Grid and Flexbox layouts for perfect image presentation
-
-### **⚡ Dynamic Frontend**
-
-- Interactive image galleries with smooth transitions
-- Portfolio filtering and category navigation for enhanced user experience
-
-### **🎨 Aesthetic UI/UX**
-
-- Modular SCSS/SASS architecture for maintainable styling
-- Professional design focused on visual storytelling
-
-### **🚀 Performance Optimized**
-
-- Optimized image loading and lazy loading techniques
-- Smooth animations and transitions for professional photography experience
-
-## 🛠️ Technologies Used
-
-- **HTML5** - Semantic markup and modern web standards
-- **CSS3/SCSS/SASS** - Advanced styling and responsive design
-- **JavaScript** - Interactive gallery features and DOM manipulation
-- **Git** - Version control and collaboration
-
-## 🌍 Live Demo
-
-The project is deployed and available at: **[https://framevision.dawidolko.pl](https://framevision.dawidolko.pl)**
-
-## 🖼️ Preview
-
-[<img src="img/framevision.dawidolko.pl_.webp" width="80%" alt="FrameVision Studio Preview"/>](img/framevision.dawidolko.pl_.webp)
-
-## 🤝 Contributing
-
-Contributions are highly welcomed! Here's how you can help:
-
-- 🐛 **Report bugs** - Found an issue? Let us know!
-- 💡 **Suggest improvements** - Have ideas for better features?
-- 🔧 **Submit pull requests** - Share your enhancements and solutions
-- 📖 **Improve documentation** - Help make the project clearer
-
-Feel free to open issues or reach out through GitHub for any questions or suggestions.
-
-## 👨‍💻 Author
-
-Created by **Dawid Olko** - Part of the ongoing web development portfolio series.
+---
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
+MIT © [Dawid Olko](https://dawidolko.pl)
