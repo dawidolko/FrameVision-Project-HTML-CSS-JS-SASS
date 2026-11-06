@@ -54,6 +54,14 @@ All of it is vanilla JavaScript and SCSS — no framework, no animation library,
 
 ---
 
+## 🎬 Demo
+
+<p align="center">
+  <img src="docs/readme/demo.webp" alt="FrameVision: a short scroll through the live site" width="80%">
+</p>
+
+---
+
 ## 🛠️ Technology Stack
 
 | Technology       | Role                                                       |
