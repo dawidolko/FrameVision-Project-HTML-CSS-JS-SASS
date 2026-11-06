@@ -20,10 +20,12 @@ burgerBtn.addEventListener("click", () => {
   nav.classList.toggle("burger--open");
   openNav.classList.toggle("burger--hide");
   closeNav.classList.toggle("burger--hide");
+  burgerBtn.setAttribute("aria-expanded", nav.classList.contains("burger--open"));
 
   navAll.forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("burger--open");
+      burgerBtn.setAttribute("aria-expanded", "false");
       closeNav.classList.add("burger--hide");
       openNav.classList.remove("burger--hide");
     });

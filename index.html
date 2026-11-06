@@ -3,43 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FrameVision Studio</title>
-    <link rel="icon" href="./img/logo.webp" type="image/webp" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap"
-      rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/fdc09ecfc9.js"
-      crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/main.css" />
-  
-    <!-- Canonical URL: the authoritative address for this page. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src &#x27;self&#x27;; img-src &#x27;self&#x27; data:; style-src &#x27;self&#x27; &#x27;unsafe-inline&#x27;; script-src &#x27;self&#x27;; font-src &#x27;self&#x27;; connect-src &#x27;self&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;self&#x27;; form-action &#x27;self&#x27;" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>FrameVision Studio | Portrait and Wedding Photography</title>
+    <meta name="description" content="FrameVision Studio is a demo photography site with portrait, wedding, family and product sessions. Built with HTML, SASS and JavaScript." />
     <link rel="canonical" href="https://framevision.dawidolko.pl/" />
-
-    <!-- Open Graph / Twitter: controls how the page renders when shared. -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://framevision.dawidolko.pl/" />
-    <meta property="og:title" content="FrameVision Studio — professional photography" />
-    <meta property="og:description" content="Photography studio offering portrait, business, family and fine art sessions. Built with HTML, SASS and JavaScript." />
     <meta property="og:site_name" content="FrameVision Studio" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="FrameVision Studio | Portrait and Wedding Photography" />
+    <meta property="og:description" content="FrameVision Studio is a demo photography site with portrait, wedding, family and product sessions. Built with HTML, SASS and JavaScript." />
+    <meta property="og:url" content="https://framevision.dawidolko.pl/" />
+    <meta property="og:image" content="https://framevision.dawidolko.pl/img/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="FrameVision Studio preview" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="FrameVision Studio — professional photography" />
-    <meta name="twitter:description" content="Portrait, business, family and fine art photography sessions." />
-
-    <!-- Structured data: lets search engines describe the studio in results. -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "FrameVision Studio",
-        "url": "https://framevision.dawidolko.pl",
-        "description": "Photography studio offering portrait, business, family and fine art sessions.",
-        "author": { "@type": "Person", "name": "Dawid Olko", "url": "https://dawidolko.pl" }
-      }
-    </script>
+    <meta name="twitter:title" content="FrameVision Studio | Portrait and Wedding Photography" />
+    <meta name="twitter:description" content="FrameVision Studio is a demo photography site with portrait, wedding, family and product sessions. Built with HTML, SASS and JavaScript." />
+    <meta name="twitter:image" content="https://framevision.dawidolko.pl/img/og-image.jpg" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"FrameVision Studio","url":"https://framevision.dawidolko.pl/","description":"Demo photography studio site with portrait, business, family and fine art sessions.","inLanguage":"en","author":{"@type":"Person","name":"Dawid Olko","jobTitle":"Fullstack / AI Developer","url":"https://dawidolko.pl/"}}</script>
+<link rel="icon" href="/img/logo.webp" type="image/webp" />
+    <link rel="preload" as="image" href="img/header_bg_small.webp" media="(max-width: 767px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="img/header_bg_large.webp" media="(min-width: 768px)" fetchpriority="high" />
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  
     <script src="/a11y/a11y-panel.js" data-accent="#1d4ed8" defer></script>
   </head>
   <body>
@@ -55,10 +44,10 @@
           <a class="nav__link" href="#team">team</a>
           <a class="nav__link" href="#contact">contact</a>
         </div>
-        <div class="burger">
-          <i class="fa-solid fa-bars"></i>
-          <i class="fa-solid fa-xmark burger--hide"></i>
-        </div>
+        <button class="burger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          <i class="fa-solid fa-xmark burger--hide" aria-hidden="true"></i>
+        </button>
       </nav>
       <div class="header__text container">
         <h1 class="header__title">capture your perfect moments</h1>
@@ -74,6 +63,9 @@
           <img
             class="about__img move"
             src="img/about.webp"
+            width="900"
+            height="600"
+            loading="lazy"
             alt="Photographer taking professional portrait" />
 
           <div class="about__text move">
@@ -88,15 +80,15 @@
             </p>
             <ul class="about__list">
               <li class="about__item">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
                 <span>Professional Portraits for All Occasions</span>
               </li>
               <li class="about__item">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
                 <span>Artistic Composition and Lighting</span>
               </li>
               <li class="about__item">
-                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check" aria-hidden="true"></i>
                 <span>Unparalleled Customer Experience</span>
               </li>
             </ul>
@@ -111,35 +103,38 @@
         <div class="services__container">
           <div class="services__content">
             <div class="services__icons services__icons--left move">
-              <i class="fa-solid fa-camera services__icon"></i>
+              <i class="fa-solid fa-camera services__icon" aria-hidden="true"></i>
               <span class="services__text">Portrait Photography</span>
             </div>
             <div class="services__icons services__icons--left move">
-              <i class="fa-solid fa-id-badge services__icon"></i>
+              <i class="fa-solid fa-id-badge services__icon" aria-hidden="true"></i>
               <span class="services__text">Business Headshots</span>
             </div>
             <div class="services__icons services__icons--left move">
-              <i class="fa-solid fa-ring services__icon"></i>
+              <i class="fa-solid fa-ring services__icon" aria-hidden="true"></i>
               <span class="services__text">Wedding Photography</span>
             </div>
           </div>
 
           <img
             src="img/services.webp"
+            width="900"
+            height="900"
+            loading="lazy"
             alt="Photographer during professional photoshoot"
             class="services__img" />
 
           <div class="services__content">
             <div class="services__icons services__icons--right move">
-              <i class="fa-solid fa-users services__icon"></i>
+              <i class="fa-solid fa-users services__icon" aria-hidden="true"></i>
               <span class="services__text">Family Sessions</span>
             </div>
             <div class="services__icons services__icons--right move">
-              <i class="fa-solid fa-box services__icon"></i>
+              <i class="fa-solid fa-box services__icon" aria-hidden="true"></i>
               <span class="services__text">Product Photography</span>
             </div>
             <div class="services__icons services__icons--right move">
-              <i class="fa-solid fa-child services__icon"></i>
+              <i class="fa-solid fa-child services__icon" aria-hidden="true"></i>
               <span class="services__text">Children Portraits</span>
             </div>
           </div>
@@ -165,13 +160,16 @@
             <img
               class="team__img"
               src="img/team1.webp"
+              width="720"
+              height="1080"
+              loading="lazy"
               alt="James Smith - our photographer" />
             <div class="team__text">
               <h3 class="team__name">James Smith</h3>
               <div class="team__icons">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <i class="fa-brands fa-twitter" aria-hidden="true"></i>
               </div>
             </div>
           </div>
@@ -179,13 +177,16 @@
             <img
               class="team__img"
               src="img/team2.webp"
+              width="720"
+              height="1080"
+              loading="lazy"
               alt="William Brown - our photographer" />
             <div class="team__text">
               <h3 class="team__name">William Brown</h3>
               <div class="team__icons">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <i class="fa-brands fa-twitter" aria-hidden="true"></i>
               </div>
             </div>
           </div>
@@ -193,13 +194,16 @@
             <img
               class="team__img"
               src="img/team3.webp"
+              width="720"
+              height="1080"
+              loading="lazy"
               alt="Olivia Garcia - our photographer" />
             <div class="team__text">
               <h3 class="team__name">Olivia Garcia</h3>
               <div class="team__icons">
-                <i class="fa-brands fa-facebook-f"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <i class="fa-brands fa-twitter" aria-hidden="true"></i>
               </div>
             </div>
           </div>
@@ -214,6 +218,9 @@
             <div class="testimonials__slide">
               <img
                 src="img/testimonials1.webp"
+                width="200"
+                height="200"
+                loading="lazy"
                 alt=""
                 class="testimonials__img" />
               <h3 class="testimonials__name">Louise Charles</h3>
@@ -225,6 +232,9 @@
             <div class="testimonials__slide">
               <img
                 src="img/testimonials2.webp"
+                width="200"
+                height="200"
+                loading="lazy"
                 alt=""
                 class="testimonials__img" />
               <h3 class="testimonials__name">Kevin Roberts</h3>
@@ -236,6 +246,9 @@
             <div class="testimonials__slide">
               <img
                 src="img/testimonials3.webp"
+                width="200"
+                height="200"
+                loading="lazy"
                 alt=""
                 class="testimonials__img" />
               <h3 class="testimonials__name">David Johnson</h3>
@@ -246,6 +259,9 @@
             <div class="testimonials__slide">
               <img
                 src="img/testimonials4.webp"
+                width="200"
+                height="200"
+                loading="lazy"
                 alt=""
                 class="testimonials__img" />
               <h3 class="testimonials__name">Andrew Taylor</h3>
@@ -257,6 +273,9 @@
             <div class="testimonials__slide">
               <img
                 src="img/testimonials5.webp"
+                width="200"
+                height="200"
+                loading="lazy"
                 alt=""
                 class="testimonials__img" />
               <h3 class="testimonials__name">Lucas Williams</h3>
@@ -293,17 +312,17 @@
         <div class="contact__container container">
           <ul class="contact__information">
             <li>
-              <i class="contact__icon fa-solid fa-location-dot"></i>
-              <a href="https://goo.gl/maps/ykswc4wJuWxcgC9o6" target="_blank"
+              <i class="contact__icon fa-solid fa-location-dot" aria-hidden="true"></i>
+              <a href="https://goo.gl/maps/ykswc4wJuWxcgC9o6" target="_blank" rel="noopener noreferrer"
                 >24 Avenue, New York</a
               >
             </li>
             <li>
-              <i class="contact__icon fa-solid fa-phone"></i>
+              <i class="contact__icon fa-solid fa-phone" aria-hidden="true"></i>
               <a href="tel:12345678999">(+00) 123-456-78999</a>
             </li>
             <li>
-              <i class="contact__icon fa-regular fa-envelope"></i>
+              <i class="contact__icon fa-regular fa-envelope" aria-hidden="true"></i>
               <a href="mailto:info@framevision.com">info@framevision.com</a>
             </li>
             <li>
@@ -317,9 +336,9 @@
               our photography community today.
             </p>
             <div class="contact__social">
-              <i class="contact__social--icon fa-brands fa-facebook-f"></i>
-              <i class="contact__social--icon fa-brands fa-instagram"></i>
-              <i class="contact__social--icon fa-brands fa-twitter"></i>
+              <i class="contact__social--icon fa-brands fa-facebook-f" aria-hidden="true"></i>
+              <i class="contact__social--icon fa-brands fa-instagram" aria-hidden="true"></i>
+              <i class="contact__social--icon fa-brands fa-twitter" aria-hidden="true"></i>
             </div>
           </div>
           <div class="contact__links">
@@ -334,7 +353,7 @@
       <div class="modal__bgc modal__bgc--hidden">
         <div class="modal">
           <form>
-            <i class="modal__icon fa-solid fa-xmark"></i>
+            <button class="modal__icon fa-solid fa-xmark" type="button" aria-label="Close booking form"></button>
             <div class="modal__body">
               <h2 class="modal__title">REQUEST A <span>SESSION</span></h2>
               <p class="modal__text">
@@ -345,6 +364,9 @@
                 <div class="modal__input">
                   <input
                     type="text"
+                    aria-label="Name"
+                    autocomplete="name"
+                    required
                     placeholder="Name*"
                     class="modal__contact-name" />
                   <span class="modal__name-error"></span>
@@ -352,6 +374,9 @@
                 <div class="modal__input">
                   <input
                     type="number"
+                    aria-label="Phone"
+                    autocomplete="tel"
+                    required
                     placeholder="Phone*"
                     class="modal__contact-phone" />
                   <span class="modal__phone-error"></span>
@@ -369,10 +394,10 @@
       Copyright &copy; <span class="year"></span> FrameVision Studio
     </footer>
 
-    <div class="scroll-btn">
-      <i class="fa-solid fa-circle-arrow-up"></i>
-    </div>
+    <button class="scroll-btn" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-circle-arrow-up" aria-hidden="true"></i>
+    </button>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
