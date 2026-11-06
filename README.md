@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://framevision.dawidolko.pl/"><img src="docs/readme/banner.webp" alt="FrameVision: frontend. One page, five sections, no framework" width="100%"></a>
+</p>
+
 # FrameVision
 
 > 📸 **One page, five sections, no framework** — a photography studio site where the scroll animations and the booking modal are hand-written
@@ -12,7 +16,7 @@ All of it is vanilla JavaScript and SCSS — no framework, no animation library,
 ![WebP](https://img.shields.io/badge/Images-WebP%20%2B%20fallback-0A84FF)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-**Live:** [framevision.dawidolko.pl](https://framevision.dawidolko.pl)
+**[Live site](https://framevision.dawidolko.pl/)** · [Screenshots](#️-screenshots) · [Getting started](#-getting-started)
 
 ---
 
@@ -38,6 +42,15 @@ All of it is vanilla JavaScript and SCSS — no framework, no animation library,
 | **Services** | What is offered, as cards.                                 |
 | **Team**     | The photographers.                                         |
 | **Contact**  | Details and the booking modal.                             |
+
+---
+
+## 🖼️ Screenshots
+
+<p align="center">
+  <img src="docs/readme/desktop.webp" alt="FrameVision on a desktop screen" width="74%">
+  <img src="docs/readme/mobile.webp" alt="FrameVision on a phone" width="22%">
+</p>
 
 ---
 
@@ -81,6 +94,12 @@ sass --watch sass/main.scss css/style.css
 
 ---
 
+## ♿ Accessibility
+
+An accessibility panel in the corner of every page changes text size, contrast, font and motion, and remembers the choice on the device. It sits on top of the markup and does not replace accessible markup.
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -103,3 +122,11 @@ FrameVision-Project-HTML-CSS-JS-SASS/
 ## 📄 License
 
 MIT © [Dawid Olko](https://dawidolko.pl)
+
+---
+
+## 👨‍💻 Author
+
+**Dawid Olko** · Fullstack / AI Developer
+
+[Portfolio](https://olkodawid.dawidolko.pl) · [CV](https://cv.dawidolko.pl) · [LinkedIn](https://www.linkedin.com/in/dawidolko/) · [GitHub](https://github.com/dawidolko)
